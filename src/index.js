@@ -2,12 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter>
+        <Switch>
+            <Route path="/home" render={(props) => <App {...props} />} />
+            {/*라우팅*/}
+            {/*<Route*/}
+            {/*    path="/other"*/}
+            {/*    render={(props) => <NucleoIcons {...props} />}*/}
+            {/*/>*/}
+            <Redirect to="/home" />
+        </Switch>
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
