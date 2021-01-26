@@ -1,16 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from "./components/Nav/HeaderNav"
+import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
+import Category from "./components/Category";
+import Home from "./components/Home";
+import React from "react";
+import LeftPanel from "./components/Nav/LeftPanel";
 
 function App() {
-  return (
-    <div>
-    {/* 상단 네비게이션 바*/}
-    <Header />
-    {/* 중앙 페이지 */}
-    {/* 하단 네비게이션 바*/}
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <LeftPanel/>
+            <Switch>
+                <Route path="/home" render={(props) => <Home {...props} />}/>
+                <Route path="/category" render={(props) => <Category {...props} />}/>
+                {/*라우팅*/}
+                {/*<Route*/}
+                {/*    path="/other"*/}
+                {/*    render={(props) => <NucleoIcons {...props} />}*/}
+                {/*/>*/}
+                <Redirect to="/home"/>
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;
