@@ -14,6 +14,7 @@ function App() {
                 <Route path="/home" render={(props) => <Home {...props} />}/>
                 <Route path="/category/cafe" render={(props) => <Category category="cafe" {...props} />}/>
                 <Route path="/category/delivery" render={(props) => <Category category="delivery" {...props} />}/>
+                <Route path="/category/others" render={(props) => <Category category="others" {...props} />}/>
                 <Route path="/category" render={(props) => <Category category="" {...props} />}/>
                 {/*라우팅*/}
                 {/*<Route*/}
