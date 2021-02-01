@@ -1,0 +1,63 @@
+.products .product {
+  display: inline-block;
+  float: right;
+  background-color: white;
+  height: 400px;
+  width: 30%;
+  margin-bottom: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 300;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.products .product a {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2fr;
+  grid-gap: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product img {
+  position: relative;
+  top: 2px;
+  bottom: 2px;
+  max-width: 150px;
+  width: 100%;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.product .movie__productName,
+.product .movie__companyName {
+  margin: 0;
+  font-weight: 300;
+}
+
+.product .movie__productName {
+  font-size: 24px;
+  color: #2c2c2c;
+}
+
+.product__contact,
+.product__email,
+.product__url {
+  font-size: 15px;
+}
+
+.product__summary,
+.proudct__description {
+}
+
+.product__summary {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.proudct__description {
+  font-size: 13px;
+}
