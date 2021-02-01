@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { LeftPanelData } from './LeftPanelData';
+import {LeftPanelData} from './LeftPanelData';
 import SubMenu from './SubMenu';
-import { IconContext } from 'react-icons/lib';
+import {IconContext} from 'react-icons/lib';
 
 const Nav = styled.div`
   background: #a0d911;
@@ -18,7 +18,7 @@ const Nav = styled.div`
 const NavIcon = styled(Link)`
   margin-left: 2rem;
   font-size: 2rem;
-  height: 80px;
+  height: 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -32,7 +32,7 @@ const SidebarNav = styled.nav`
   justify-content: center;
   position: fixed;
   top: 0;
-  left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  left: ${({sidebar}) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
   z-index: 10;
 `;
@@ -41,26 +41,35 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
-const LeftPanel = () => {
+const useSlider = () => {
     const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar);
+    return {
+        sidebarStatus: sidebar,
+        setSidebar: setSidebar
+    }
+}
+
+const LeftPanel = () => {
+    const {sidebarStatus, setSidebar} = useSlider();
+
+    const toggleSidebar = () => setSidebar(!sidebarStatus);
 
     return (
         <>
-            <IconContext.Provider value={{ color: '#fff' }}>
+            <IconContext.Provider value={{color: '#fff'}}>
                 <Nav>
                     <NavIcon to='#'>
-                        <FaIcons.FaBars onClick={showSidebar} />
+                        <FaIcons.FaBars onClick={toggleSidebar}/>
                     </NavIcon>
                 </Nav>
-                <SidebarNav sidebar={sidebar}>
+                <SidebarNav sidebar={sidebarStatus}>
                     <SidebarWrap>
                         <NavIcon to='#'>
-                            <AiIcons.AiOutlineClose onClick={showSidebar} />
+                            <AiIcons.AiOutlineClose onClick={toggleSidebar}/>
                         </NavIcon>
                         {LeftPanelData.map((item, index) => {
-                            return <SubMenu item={item} key={index} />;
+                            return <SubMenu item={item} key={index} toggleEvent={toggleSidebar}/>;
                         })}
                     </SidebarWrap>
                 </SidebarNav>
