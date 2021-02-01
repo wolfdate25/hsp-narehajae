@@ -22,8 +22,8 @@ class Category extends React.Component {
           ? Object.keys(products).map((productKey) => {
               return (
                 <div className="products" key={productKey}>
-                  {products.map((product) => {
-                    console.log(productKey);
+                  {Object.values(products[productKey]).map((product) => {
+                    console.log(products[productKey]);
                     return (
                       <Shop
                         id={product.id}
