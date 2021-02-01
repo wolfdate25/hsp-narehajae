@@ -22,7 +22,7 @@ function Shop({
         <h5 className="product__email">Email: {email}</h5>
         <h5 className="product__url">URL: {url}</h5>
         <p className="product__summary">{summary}</p>
-        <p className="proudct__description">{description.slice(0, 150)}...</p>
+        <p className="proudct__description">{description.slice(0, 200)}...</p>
       </div>
     </div>
   );
