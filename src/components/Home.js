@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import bgAnimal from "../asset/home/bg-animal.png"
 import bgEco from "../asset/home/bg-eco.jpg"
-import "../App.css"
+import "../home.css"
 
 const MainBanner = styled.div`
   max-height: 100%;

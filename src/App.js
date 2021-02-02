@@ -13,10 +13,7 @@ function App() {
       <Switch>
         <Route path="/home" render={(props) => <Home {...props} />} />
         <Route path="/category/:category" component={Category}></Route>
-        <Route
-          path="/category"
-          render={(props) => <Category category="" {...props} />}
-        />
+        <Route path="/category" component={Category} /> 
         {/*라우팅*/}
         {/*<Route*/}
         {/*    path="/other"*/}
