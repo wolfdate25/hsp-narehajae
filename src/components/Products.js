@@ -7,7 +7,7 @@ export const Product = {
       summary: "세제없이 잘 닦이는 다목적 와이퍼",
       description:
         "특수섬유로 별도의 화학세제 없이 기름때, 묶은때가 말끔하게 잘 닦이는 청소용 다목적와이퍼입니다.",
-      image: "https://i.imgur.com/NoyP4t.jpeg",
+      image: "https://i.imgur.com/4QXJJaz.jpg",
       companyName: "수오미",
       contact: "080-000-3706",
       email: "help@sumomi.co.kr",
