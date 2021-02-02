@@ -2,18 +2,20 @@ import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import bgAnimal from "../asset/home/bg-animal.png"
 import bgEco from "../asset/home/bg-eco.jpg"
-
+import "../App.css"
 
 const MainBanner = styled.div`
-  width: auto;
-  height: 90vh;
+  max-height: 100%;
+  max-width: 100%;
   text-align: center;
+  float: center;
 `;
 
 const FitImage = styled.img`
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+  float: center
 `;
 
 const content = [
@@ -48,7 +50,6 @@ function Home() {
             <MainBanner onClick={() => changeItem(1)}>
                 <FitImage src={currentItem.url} alt="mainBanner"/>
             </MainBanner>
-
 
             {/*{content.map((section, index) => (*/}
             {/*    <button onClick={() => changeItem(index)}>{section.tab}</button>*/}
