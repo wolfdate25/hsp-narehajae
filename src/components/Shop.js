@@ -20,7 +20,9 @@ function Shop({
         <h4 className="product__companyName">{companyName}</h4>
         <h5 className="product__contact">Contact: {contact}</h5>
         <h5 className="product__email">Email: {email}</h5>
-        <h5 className="product__url">URL: {url}</h5>
+        <h5 className="product__url">
+          <a href={url}>URL: {url}</a>
+        </h5>
         <p className="product__summary">{summary}</p>
         <p className="proudct__description">{description.slice(0, 200)}...</p>
       </div>
