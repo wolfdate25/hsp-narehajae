@@ -66,7 +66,7 @@ const StyledButton2 = styled.button`
   
 `;
 
-function Home2() {
+function Description() {
     return (
         <>
             <MainBanner>
@@ -214,4 +214,4 @@ const data = [
 ];
 
 
-export default Home;
+export default Description;
