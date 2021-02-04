@@ -20,33 +20,35 @@ const FitImage = styled.img`
 const FloatingBtn = styled.button`
 
   position: absolute;
+  width: 270px;
   height: 60px;
   bottom: 10%;
   right: 10%;
-  background-color: #FDE047;
+  background-color: rgba( 0, 0, 0, 0.3);
   color: #FFF;
-  border-radius: 50px;
+  border-radius: 10px;
   text-align: center;
   display: inline-block;
   transition: 0.3s;
-  font-size: 2em;
+  font-size: 1.35em;
+  box-shadow: 3px 3px 3px 0px #515151;
 
   &:hover {
     opacity: 1;
-    background-color: cadetblue;
+    background-color: rgba( 0, 0, 0, 0.5);
   }
 `;
 
 const content = [
     {
         url: `${bgAnimal}`,
-        btn: "버튼1",
+        btn: "친환경 제품 왜 써야할까?",
         path: "/description"
     },
-    {
+    {   
         url: `${bgEco}`,
-        btn: "버튼2",
-        path: "/description"
+        btn: "제품을 사고 싶다면?",
+        path: "/category"
     }
 ]
 
