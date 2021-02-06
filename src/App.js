@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Category from "./components/Cetegory/Category";
@@ -6,6 +5,7 @@ import DetailCategory from "./components/Cetegory/DetailCategory";
 import Home from "./components/Home";
 import React from "react";
 import LeftPanel from "./components/Nav/LeftPanel";
+import Description from "./components/Description";
 
 function App() {
   return (
