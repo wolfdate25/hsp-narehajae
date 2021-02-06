@@ -13,6 +13,10 @@ function App() {
       <LeftPanel />
       <Switch>
         <Route path="/home" render={(props) => <Home {...props} />} />
+        <Route path="/description">
+          {" "}
+          <Description />
+        </Route>
         <Route path="/category/:category" component={DetailCategory} />
         <Route path="/category" component={Category} />
         {/*라우팅*/}
