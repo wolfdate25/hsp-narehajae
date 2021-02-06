@@ -3,11 +3,10 @@
   float: right;
   background-color: white;
   height: 500px;
-  width: 30%;
+  width: 35%;
   margin-bottom: 70px;
   margin-left: 20px;
   margin-right: 20px;
-  font-weight: 300;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
@@ -26,38 +25,55 @@
   position: relative;
   top: 2px;
   bottom: 2px;
-  max-width: 150px;
-  width: 100%;
+  margin-left: 72px;
+  width: 300px;
+  height: 300px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
-.product .movie__productName,
-.product .movie__companyName {
+.product .product__productName,
+.product .product__companyName {
   margin: 0;
-  font-weight: 300;
+  font-weight: 500;
 }
 
-.product .movie__productName {
+.product .product__productName {
   font-size: 24px;
-  color: #2c2c2c;
+  color: rgba(0, 0, 0, 0.9);
+  margin-top: 5px;
+}
+
+.product .product__companyName {
+  font-weight: 400;
 }
 
 .product__contact,
 .product__email,
 .product__url {
-  font-size: 15px;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.product__contact {
+  margin-top: 5px;
 }
 
 .product__summary,
 .proudct__description {
+  margin: 2px;
 }
 
 .product__summary {
-  font-size: 15px;
+  margin-top: 7px;
+  font-size: 16px;
   font-style: italic;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .proudct__description {
-  font-size: 13px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
 }
