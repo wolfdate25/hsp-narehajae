@@ -1,6 +1,6 @@
 import React from "react";
 import Shop from "./Shop.js";
-import { Product } from "./Products.js";
+import { Product } from "../Products.js";
 
 class Category extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class Category extends React.Component {
               return (
                 <div className="products" key={productKey}>
                   {Object.values(products[productKey]).map((product) => {
-                    console.log(products[productKey]);
+                    console.log(product);
                     return (
                       <Shop
                         id={product.id}

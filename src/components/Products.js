@@ -1,5 +1,5 @@
 export const Product = {
-  Cafe: [
+  cafe: [
     {
       id: "002",
       category: "Cafe",
@@ -53,7 +53,7 @@ export const Product = {
       url: "http://colorcup.co.kr/",
     },
   ],
-  Delivery: [
+  delivery: [
     {
       id: "101",
       category: "Delivery",
@@ -146,7 +146,7 @@ export const Product = {
       url: "http://colorcup.co.kr/",
     },
   ],
-  HouseholdGoods: [
+  householdGoods: [
     {
       id: "201",
       category: "HouseholdGoods",
@@ -186,7 +186,7 @@ export const Product = {
       url: "https://www.suomi.co.kr/main/index.php",
     },
   ],
-  Others: [
+  others: [
     {
       id: "301",
       category: "Others",
