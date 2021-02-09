@@ -2,7 +2,7 @@ import React from "react";
 import Shop from "./Shop.js";
 import { Product } from "../Products.js";
 
-class Category extends React.Component {
+class DetailCategory extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,30 +16,34 @@ class Category extends React.Component {
 
   render() {
     const { products } = this.state;
+    const category = this.props.match.params.category;
+    console.log(this.props.match.params.category);
     return (
       <div>
         {products
           ? Object.keys(products).map((productKey) => {
-              return (
-                <div className="products" key={productKey}>
-                  {Object.values(products[productKey]).map((product) => {
-                    console.log(product);
-                    return (
-                      <Shop
-                        id={product.id}
-                        image={product.image}
-                        productName={product.productName}
-                        companyName={product.companyName}
-                        contact={product.contact}
-                        email={product.email}
-                        url={product.url}
-                        summary={product.summary}
-                        description={product.description}
-                      />
-                    );
-                  })}
-                </div>
-              );
+              if (productKey === category) {
+                return (
+                  <div className="products" key={productKey}>
+                    {Object.values(products[productKey]).map((product, id) => {
+                      console.log(product);
+                      return (
+                        <Shop
+                          key={product.id}
+                          image={product.image}
+                          productName={product.productName}
+                          companyName={product.companyName}
+                          contact={product.contact}
+                          email={product.email}
+                          url={product.url}
+                          summary={product.summary}
+                          description={product.description}
+                        />
+                      );
+                    })}
+                  </div>
+                );
+              }
             })
           : "no products"}
       </div>
@@ -47,7 +51,7 @@ class Category extends React.Component {
   }
 }
 
-export default Category;
+export default DetailCategory;
 
 /* import React from "react";
 import {organizations} from "./Products";
@@ -94,4 +98,8 @@ export default function Category({category}) {
         <ListItems type={category}/>
     );
 }
+*/
+
+/*
+
 */
