@@ -1,6 +1,7 @@
 import React from "react";
 import Shop from "./Shop.js";
 import { Product } from "../Products.js";
+import { Helmet } from "react-helmet";
 
 class Category extends React.Component {
   constructor(props) {
@@ -18,6 +19,10 @@ class Category extends React.Component {
     const { products } = this.state;
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>RaonHajae - category</title>
+        </Helmet>
         {products
           ? Object.keys(products).map((productKey) => {
               return (
