@@ -1,13 +1,14 @@
-.products .product {
-  display: inline-block;
-  float: right;
-  background-color: white;
+.product {
   height: 500px;
   width: 35%;
-  margin-bottom: 70px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 15px 0;
+  margin-left: 8%;
   padding: 20px;
+}
+
+.products .product {
+  display: inline-flex;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
@@ -23,10 +24,10 @@
 
 .product img {
   position: relative;
+  margin: 0 10%;
   top: 2px;
   bottom: 2px;
-  margin-left: 72px;
-  width: 300px;
+  width: 80%;
   height: 300px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
