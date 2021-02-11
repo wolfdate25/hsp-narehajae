@@ -23,7 +23,7 @@ class DetailCategory extends React.Component {
       <div>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>RaonHajae - category - {category}</title>
+          <title>RaonHajae</title>
         </Helmet>
         {products
           ? Object.keys(products).map((productKey) => {

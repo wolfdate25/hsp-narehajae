@@ -13,7 +13,7 @@ function App() {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>RaonHajae - Home</title>
+        <title>RaonHajae</title>
       </Helmet>
       <BrowserRouter>
         <LeftPanel />
