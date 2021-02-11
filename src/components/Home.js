@@ -31,6 +31,7 @@ const FloatingBtn = styled.button`
   transition: 0.3s;
   font-size: 1.35em;
   box-shadow: 3px 3px 3px 0px #515151;
+  font-family: "Do Hyeon", sans-serif;
 
   &:hover {
     opacity: 1;

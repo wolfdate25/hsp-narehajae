@@ -35,6 +35,9 @@ const SidebarNav = styled.nav`
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 350ms;
   z-index: 10;
+  span {
+    font-family: "Jua", sans-serif;
+  }
 `;
 
 const SidebarWrap = styled.div`
@@ -59,8 +62,8 @@ const LeftPanel = () => {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
-          <NavIcon to="#">
-            <FaIcons.FaBars onClick={toggleSidebar} />
+          <NavIcon to="#" onClick={toggleSidebar}>
+            <FaIcons.FaBars />
           </NavIcon>
         </Nav>
         <SidebarNav sidebar={sidebarStatus}>
