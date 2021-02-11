@@ -21,7 +21,7 @@ class Category extends React.Component {
       <div>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>RaonHajae - category</title>
+          <title>RaonHajae</title>
         </Helmet>
         {products
           ? Object.keys(products).map((productKey) => {
