@@ -19,17 +19,17 @@ const FitImage = styled.img`
 
 const FloatingCon = styled.div`
   position: absolute;
-  height: 80px;
-  bottom: 50%;
-  right: 10%;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  border-radius: 10px;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 300px;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  text-align: left;
   display: inline-block;
   transition: 0.3s;
-  font-size: 30px;
-  box-shadow: 3px 3px 3px 0px #515151;
+  font-size: 28px;
+  font-family: "Do Hyeon", sans-serif;
 `;
 
 const FloatingBtn = styled.button`
@@ -59,13 +59,13 @@ const content = [
     url: `${bgAnimal}`,
     btn: "친환경 제품 왜 써야할까?",
     path: "/description",
-    message: "코로나로 인한 무분별한 일회용품 사용으로 인한 결과입니다.",
+    message: "\"코로나로 인한 무분별한 일회용품 사용으로 인한 결과입니다.\"",
   },
   {
     url: `${bgEco}`,
     btn: "제품을 사고 싶다면?",
     path: "/category",
-    message: "코로나로 인한 무분별한 일회용품 사용으로 인한 결과입니다.",
+    message: "\"친환경 제품을 구매할 수 있는 사이트 입니다.\"",
   },
 ];
 
