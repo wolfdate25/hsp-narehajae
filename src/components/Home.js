@@ -17,25 +17,31 @@ const FitImage = styled.img`
   object-fit: contain;
 `;
 
+const FlatingCon = styled.div`
+  positoin: absolute;
+  height: 10%;
+  left: 10%;
+`;
+
 const FloatingBtn = styled.button`
   position: absolute;
-  width: 270px;
-  height: 60px;
-  bottom: 10%;
+  width: 300px;
+  height: 80px;
+  bottom: 77%;
   right: 10%;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
   border-radius: 10px;
   text-align: center;
   display: inline-block;
   transition: 0.3s;
-  font-size: 1.35em;
+  font-size: 30px;
   box-shadow: 3px 3px 3px 0px #515151;
   font-family: "Do Hyeon", sans-serif;
 
   &:hover {
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255);
   }
 `;
 
@@ -51,6 +57,12 @@ const content = [
     path: "/category",
   },
 ];
+ 
+const context = [
+  { 
+    div: "코로나로 인한 무분별한 일회용품 사용으로 인한 결과입니다."
+  }
+]
 
 const useTabs = (initialTab, allTabs) => {
   const [currentIndex, setCurrentIndex] = useState(initialTab);
@@ -84,6 +96,7 @@ function Home() {
         <FitImage src={currentItem.url} alt="mainBanner" />
         <Link to={currentItem.path}>
           <FloatingBtn>{currentItem.btn}</FloatingBtn>
+          <FlatingCon>{currentItem.div}</FlatingCon>
         </Link>
       </MainBanner>
 
