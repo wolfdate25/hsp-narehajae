@@ -17,10 +17,19 @@ const FitImage = styled.img`
   object-fit: contain;
 `;
 
-const FlatingCon = styled.div`
-  positoin: absolute;
-  height: 10%;
-  left: 10%;
+const FloatingCon = styled.div`
+  position: absolute;
+  height: 80px;
+  bottom: 50%;
+  right: 10%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 30px;
+  box-shadow: 3px 3px 3px 0px #515151;
 `;
 
 const FloatingBtn = styled.button`
@@ -50,19 +59,15 @@ const content = [
     url: `${bgAnimal}`,
     btn: "친환경 제품 왜 써야할까?",
     path: "/description",
+    message: "코로나로 인한 무분별한 일회용품 사용으로 인한 결과입니다.",
   },
   {
     url: `${bgEco}`,
     btn: "제품을 사고 싶다면?",
     path: "/category",
+    message: "코로나로 인한 무분별한 일회용품 사용으로 인한 결과입니다.",
   },
 ];
- 
-const context = [
-  { 
-    div: "코로나로 인한 무분별한 일회용품 사용으로 인한 결과입니다."
-  }
-]
 
 const useTabs = (initialTab, allTabs) => {
   const [currentIndex, setCurrentIndex] = useState(initialTab);
@@ -96,8 +101,8 @@ function Home() {
         <FitImage src={currentItem.url} alt="mainBanner" />
         <Link to={currentItem.path}>
           <FloatingBtn>{currentItem.btn}</FloatingBtn>
-          <FlatingCon>{currentItem.div}</FlatingCon>
         </Link>
+        <FloatingCon>{currentItem.message}</FloatingCon>
       </MainBanner>
 
       {/*{content.map((section, index) => (*/}
