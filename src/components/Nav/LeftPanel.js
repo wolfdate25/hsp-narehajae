@@ -40,6 +40,13 @@ const SidebarNav = styled.nav`
   }
 `;
 
+const Title = styled.div`
+  font-size: x-large;
+  margin-left: 30px;
+  color: white;
+  font-family: "Do Hyeon", sans-serif;
+`;
+
 const SidebarWrap = styled.div`
   width: 100%;
 `;
@@ -65,6 +72,7 @@ const LeftPanel = () => {
           <NavIcon to="#" onClick={toggleSidebar}>
             <FaIcons.FaBars />
           </NavIcon>
+          <Title>라온하제 - 친환경 제품 구매 사이트</Title>
         </Nav>
         <SidebarNav sidebar={sidebarStatus}>
           <SidebarWrap>
